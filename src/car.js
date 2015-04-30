@@ -31,5 +31,12 @@ Car.prototype.dropOff = function(removePassenger){
   this.passengers = [];
   }
 };
-
+Car.prototype.stop = function(newState){
+  this.state = "off";
+};
+Car.prototype.park = function(newState){
+  if (this.state !== "on") {
+  this.passengers = [];
+  }
+};
 module.exports=Car;
