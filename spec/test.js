@@ -106,7 +106,7 @@ describe('Car', function(){
   });
 // extra code to park the car
   describe('#park', function(){
-    xit('should leave passenger in the passengers array if car is on', function(){
+    it('should leave passenger in the passengers array if car is on', function(){
       myCar.park();
       myCar.pickUp("john");
       myCar.on();
