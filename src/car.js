@@ -23,5 +23,8 @@ Car.prototype.pickUp = function(newPassenger){
   this.passengers = ["john"];
   }
 };
+Car.prototype.dropOff = function(removePassenger){
+  this.passengers = [];
+};
 
 module.exports=Car;
