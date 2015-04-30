@@ -12,11 +12,14 @@ Car.prototype.sale = function(newOwner){
 };
 
 Car.prototype.paint = function(newColor){
-  this.color = newColor
+  this.color = newColor;
 };
 
 Car.prototype.start = function(newState){
   this.state = "on";
+};
+Car.prototype.off = function(changeState){
+  this.state = "off";
 };
 Car.prototype.pickUp = function(newPassenger){
   if (this.state === "on") {
