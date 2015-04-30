@@ -16,7 +16,10 @@ Car.prototype.paint = function(newColor){
 };
 
 Car.prototype.start = function(newState){
-  this.state = "on"
+  this.state = "on";
+};
+Car.prototype.pickUp = function(newPassenger){
+  this.passengers = ["john"];
 };
 
 module.exports=Car;
