@@ -104,5 +104,22 @@ describe('Car', function(){
       expect(myCar.passengers[0]).to.equal("john");
     });
   });
+// extra code to park the car
+  describe('#park', function(){
+    it('should leave passenger in the passengers array if car is on', function(){
+      myCar.park();
+      myCar.pickUp("john");
+      myCar.on();
+      myCar.dropOff("john");
+      expect(myCar.passengers[0]).to.equal("john");
+    });
+
+    it('should leave passenger in the passengers array if car is off', function(){
+      myCar.park();
+      myCar.pickUp("john");
+      myCar.dropOff("john");
+      expect(myCar.passengers).to.be.empty;
+    });
+  });
 
 });
